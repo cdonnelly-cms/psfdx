@@ -99,6 +99,7 @@ function Get-SalesforceScratchOrgs {
     return $result
 }
 
+# TODO improve from https://www.sfdc-code.com/automate-scratch-org-creation/
 function New-SalesforceScratchOrg {
     [CmdletBinding()]
     Param(
@@ -121,6 +122,7 @@ function Select-SalesforceObject {
     return Select-SalesforceObjects -Query $query -Username $Username -UseToolingApi:$UseToolingApi
 }
 
+# Example: Select-SalesforceObjects -Query "Select Id FROM Account LIMIT 10"  -Username xxx
 function Select-SalesforceObjects {    
     [CmdletBinding()]
     Param(
@@ -266,6 +268,7 @@ function Set-SalesforceObject {
     return Invoke-Sfdx -Command $command        
 }
 
+# Example Get-SalesforceRecordType -ObjectType Account -Username xxx
 function Get-SalesforceRecordType {
     [CmdletBinding()]
     Param(        

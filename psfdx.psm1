@@ -273,7 +273,7 @@ function Get-SalesforceRecordType {
         [Parameter(Mandatory = $true)][string] $Username
     )    
 
-    $query = "SELECT Id, SobjectType, Name, DeveloperName, IsActive, IsPersonType"
+    $query = "SELECT Id, SobjectType, Name, DeveloperName, IsActive"
     $query += " FROM RecordType"
     if ($ObjectType) { $query += " WHERE SobjectType = '$ObjectType'" }
     return Select-SalesforceObjects -Query $query -Username $Username

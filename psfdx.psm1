@@ -307,6 +307,11 @@ function Pull-SalesforceCode {
     }
 }
 
+# This command is required to run from within an SFDX project.
+function Push-Salesforce {
+    sfdx force:source:push 
+}
+
 function Push-SalesforceCode {
     [CmdletBinding()]
     Param(        

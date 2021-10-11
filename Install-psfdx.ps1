@@ -8,7 +8,7 @@ Write-Verbose "Module Path: $pssfdxpath"
 
 # Get Source Path
 $filename = "psfdx.psm1"
-$gitUrl = "https://raw.githubusercontent.com/ZenInternet/psfdx/master/psfdx.psm1"
+$gitUrl = "https://raw.githubusercontent.com/cdonnelly-cms/psfdx/master/psfdx.psm1"
 
 # Install
 Write-Host "Creating module directory"
